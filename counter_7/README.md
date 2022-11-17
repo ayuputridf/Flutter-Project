@@ -14,13 +14,9 @@ Perbedaan :
 | Stateless Widget | Stateful Widget| 
 | :---------: | ----------: |
 | Tidak bisa menggunakan fungsi *setState()* | Bisa menggunakan fungsi *setState()*  | 
-| :---------: | ----------: |
 | Prosesnya dari *Constructor* -> *Build* | Prosesnya dari *Constructor* -> *Internal State* -> *Build*  |
-| :---------: | ----------: |
 | Untuk dapat merubah tampilan UI, harus re-render widget, makin banyak makin tinggi performance yang diperlukan di device | gaperlu, kebalikannya |
-| :---------: | ----------: |
 | Bawaan Flutter : Text, Icon, IconButton, dll  | Checkbox, Radio, Slider, TextField, dll|
-| :---------: | ----------: |
 
 Notes :
 *Internal State* : tahap dimana ada pemrosesan state / keaadaan baru yang dipicu dari perubahan data
@@ -75,9 +71,7 @@ Notes :
 | Navigator.push () | Navigator.pop ()| 
 | :---------: | ----------: |
 | Metode push digunakan untuk menambahkan rute lain ke atas tumpukan screen (stack) saat ini. | Metode pop menghapus rute paling atas dari tumpukan. | 
-| :---------: | ----------: |
 | Halaman baru ditampilkan di atas halaman sebelumnya.| Ini menampilkan halaman sebelumnya kepada pengguna. |
-| :---------: | ----------: |
 
 2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
     ##### Column: untuk menampung widget lainnya secara vertikal

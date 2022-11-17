@@ -1,7 +1,7 @@
 Nama    : Ayu Putri Dewi Fitriyani
 Kelas   : E
 
-#PBP Tugas 7-----------------------
+# PBP Tugas 7-----------------------
 ### Perbedaan Stateless Widget dan Stateful Widget 
 
 Stateless Widget : Widget yang gabisa berubah dan gaakan pernah berubah, selain itu bisa dikombinasikan dengan Stateless Widget
@@ -13,11 +13,14 @@ Stateful Widget : Widget yang dinamis atau bisa berubah
 Perbedaan :
 | Stateless Widget | Stateful Widget| 
 | :---------: | ----------: |
-
-| Tidak bisa menggunakan fungsi *setState()* | Bisa menggunakan fungsi *setState()*  | Bisa menggunakan fungsi *setState()* | Bisa menggunakan fungsi setState()  |
+| Tidak bisa menggunakan fungsi *setState()* | Bisa menggunakan fungsi *setState()*  | 
+| :---------: | ----------: |
 | Prosesnya dari *Constructor* -> *Build* | Prosesnya dari *Constructor* -> *Internal State* -> *Build*  |
+| :---------: | ----------: |
 | Untuk dapat merubah tampilan UI, harus re-render widget, makin banyak makin tinggi performance yang diperlukan di device | gaperlu, kebalikannya |
+| :---------: | ----------: |
 | Bawaan Flutter : Text, Icon, IconButton, dll  | Checkbox, Radio, Slider, TextField, dll|
+| :---------: | ----------: |
 
 Notes :
 *Internal State* : tahap dimana ada pemrosesan state / keaadaan baru yang dipicu dari perubahan data
@@ -71,11 +74,10 @@ Notes :
 
 | Navigator.push () | Navigator.pop ()| 
 | :---------: | ----------: |
-
 | Metode push digunakan untuk menambahkan rute lain ke atas tumpukan screen (stack) saat ini. | Metode pop menghapus rute paling atas dari tumpukan. | 
-
+| :---------: | ----------: |
 | Halaman baru ditampilkan di atas halaman sebelumnya.| Ini menampilkan halaman sebelumnya kepada pengguna. |
-
+| :---------: | ----------: |
 
 2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
     ##### Column: untuk menampung widget lainnya secara vertikal
@@ -86,10 +88,10 @@ Notes :
 
 
 3. Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
-##### onChanged : terjadi ketika widget diubah
-##### onPressed : terjadi ketik awidget di tekan
-##### onTap: terjadi ketika widget di tap
-##### onSaved: terjadi ketika widget disimpan
+    ##### onChanged : terjadi ketika widget diubah
+    ##### onPressed : terjadi ketik awidget di tekan
+    ##### onTap: terjadi ketika widget di tap
+    ##### onSaved: terjadi ketika widget disimpan
 
 4. Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
 

@@ -1,6 +1,7 @@
 Nama    : Ayu Putri Dewi Fitriyani
 Kelas   : E
 
+#PBP Tugas 7-----------------------
 ### Perbedaan Stateless Widget dan Stateful Widget 
 
 Stateless Widget : Widget yang gabisa berubah dan gaakan pernah berubah, selain itu bisa dikombinasikan dengan Stateless Widget
@@ -63,15 +64,62 @@ Notes :
 - Buat *condition* apabila angka berupa ganjil ataupun genap
 -Lalu Start and Debugging
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+# PBP Tugas 8 -----------------------
 
-A few resources to get you started if this is your first Flutter project:
+1. Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+| Navigator.push () | Navigator.pop ()| 
+| :---------: | ----------: |
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| Metode push digunakan untuk menambahkan rute lain ke atas tumpukan screen (stack) saat ini. | Metode pop menghapus rute paling atas dari tumpukan. | 
+
+| Halaman baru ditampilkan di atas halaman sebelumnya.| Ini menampilkan halaman sebelumnya kepada pengguna. |
+
+
+2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+    ##### Column: untuk menampung widget lainnya secara vertikal
+    ##### Container: sebagai container untuk menampung widget lainnya
+    ##### Form: untuk membuat form
+    ##### ListTile: row yang menampung teks sebagai leading dan trailing
+    ##### Drawer: untuk membuat drawer di sisi kiri layar (untuk navigasi)
+
+
+3. Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
+##### onChanged : terjadi ketika widget diubah
+##### onPressed : terjadi ketik awidget di tekan
+##### onTap: terjadi ketika widget di tap
+##### onSaved: terjadi ketika widget disimpan
+
+4. Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+
+    Navigator akan mengganti halaman aplikasi dan mengatur stack of route. Selain itu Navigator akan menyediakan dua cara untuk mengatur stack of route :
+    - Declarative => menggunakan Navigator.pages
+    - Imperative => menggunakan Navigator.push dan Navigator.pop
+
+5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+
+##### Membuat tiga tombol navigasi pada drawer 
+    - Membuat file berupa drawer.bat yang berisi 3 navigasi, sebenernya bisa aja ditaro di file tambah_budget (seperti di form.dart lab 7) tapi agar memudahkan saja
+![](gambar/1.png)
+
+##### Membuat form judul dan nominal 
+    - membuat variable terlebih dahulu
+    - memasukan fungsi drawer pada buildcontext
+![](gambar/2.png)
+
+##### Membuat padding yang mengatur form judul dan nominal tersebut
+![](gambar/3.png)
+
+##### Membuat dropdown
+![](gambar/6.png)
+
+##### Membuat button yang memunculkan tanggal
+![](gambar/4.png)
+![](gambar/5.png)
+
+##### Membuat file data_budget yang akan menampilkan semua data yang diinput
+![](gambar/7.png)
+
+##### Membuat file budget yang akan menampilkan attribute yang dibutuhkan
+![](gambar/8.png)

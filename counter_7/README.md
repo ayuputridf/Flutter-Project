@@ -119,3 +119,13 @@ Notes :
 
 ##### Membuat file budget yang akan menampilkan attribute yang dibutuhkan
 ![](gambar/8.png)
+
+# PBP Tugas 9 -----------------------
+ 
+ 1. Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+ 
+ 2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+ 
+ 3. Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+ 
+ 4. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.

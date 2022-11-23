@@ -11,6 +11,10 @@ class FormBudget extends StatefulWidget {
   State<FormBudget> createState() => _FormBudgetState();
 }
 
+// Membuat form judul dan nominal 
+    // - membuat variable terlebih dahulu
+    // - memasukan fungsi drawer pada buildcontext
+
 class _FormBudgetState extends State<FormBudget> {
   List<Budget> _budget = [];
   final _formKey = GlobalKey<FormState>();
@@ -19,7 +23,6 @@ class _FormBudgetState extends State<FormBudget> {
   String _jenis = "Pemasukan";
   List<String> listJenis = ["Pemasukan", "Pengeluaran"];
 
-  // create variable for date from date picker
   DateTime? _date;
 
   @override
@@ -38,6 +41,8 @@ class _FormBudgetState extends State<FormBudget> {
               padding: const EdgeInsets.all(20.0),
               child: Column(
                 children: [
+
+// Membuat padding yang mengatur form judul dan nominal tersebut
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
@@ -91,6 +96,8 @@ class _FormBudgetState extends State<FormBudget> {
                       },
                     ),
                   ),
+
+// Membuat dropdown
                   ListTile(
                     title: const Text("Pilih Jenis"),
                     trailing: DropdownButton(
@@ -110,6 +117,8 @@ class _FormBudgetState extends State<FormBudget> {
                   ),
                   // create date picker inside list tile
                   Center(
+
+// Membuat button yang memunculkan tanggal
                     child: ElevatedButton(
                       onPressed: () {
                         showDatePicker(

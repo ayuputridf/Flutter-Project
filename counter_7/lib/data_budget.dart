@@ -14,6 +14,8 @@ class DataBudget extends StatefulWidget {
 
 class _DataBudgetState extends State<DataBudget> {
   @override
+
+// Membuat file data_budget yang akan menampilkan semua data yang diinput
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(

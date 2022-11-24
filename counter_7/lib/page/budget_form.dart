@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:counter_7/data_budget.dart';
+import 'package:counter_7/page/budget_data.dart';
 import 'package:counter_7/main.dart';
-import 'package:counter_7/budget.dart';
-import 'package:counter_7/drawer.dart';
+import 'package:counter_7/model/budget.dart';
+import 'package:counter_7/drawer/drawer.dart';
 
 class FormBudget extends StatefulWidget {
   const FormBudget({super.key});
@@ -46,16 +46,20 @@ class _FormBudgetState extends State<FormBudget> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
+                      // Membuat elemen input berupa nominal budget
                       decoration: InputDecoration(
                           labelText: "Judul",
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0),
                           )),
+                      
+                      // Menambahkan behavior saat nama diketik
                       onChanged: (String? value) {
                         setState(() {
                           _judul = value!;
                         });
                       },
+                      // Menambahkan behavior saat data disimpan    
                       onSaved: (String? value) {
                         setState(() {
                           _judul = value!;
@@ -73,11 +77,13 @@ class _FormBudgetState extends State<FormBudget> {
                     padding: const EdgeInsets.all(8.0),
                     child: TextFormField(
                       keyboardType: TextInputType.number,
+                      // Membuat elemen input berupa nominal budget
                       decoration: InputDecoration(
                           labelText: "Nominal",
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0),
                           )),
+                    // Menambahkan behavior saat nama diketik
                       onChanged: (String? value) {
                         setState(() {
                           _nominal = value!;
@@ -118,7 +124,7 @@ class _FormBudgetState extends State<FormBudget> {
                   // create date picker inside list tile
                   Center(
 
-// Membuat button yang memunculkan tanggal
+// Membuat button yang memunculkan pilihan tanggal
                     child: ElevatedButton(
                       onPressed: () {
                         showDatePicker(

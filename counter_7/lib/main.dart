@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:counter_7/tambah_budget.dart';
-import 'package:counter_7/data_budget.dart';
-import 'package:counter_7/budget.dart';
-import 'package:counter_7/drawer.dart';
+import 'package:counter_7/page/budget_form.dart';
+import 'package:counter_7/page/budget_data.dart';
+import 'package:counter_7/model/budget.dart';
+import 'package:counter_7/drawer/drawer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -65,6 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             
+  // Mengecek nilai counter apakah genap atau ganjil            
             if (_counter %2 == 0)
               const Text(
                 'GENAP' ,

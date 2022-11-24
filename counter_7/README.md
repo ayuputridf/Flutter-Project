@@ -97,35 +97,92 @@ Notes :
 
 ##### Membuat tiga tombol navigasi pada drawer 
     - Membuat file berupa drawer.bat yang berisi 3 navigasi, sebenernya bisa aja ditaro di file tambah_budget (seperti di form.dart lab 7) tapi agar memudahkan saja
-![](gambar/1.png)
+![](gambar/tugas8/1.png )
 
 ##### Membuat form judul dan nominal 
     - membuat variable terlebih dahulu
     - memasukan fungsi drawer pada buildcontext
-![](gambar/2.png)
+![](gambar/tugas8/2.png)
 
 ##### Membuat padding yang mengatur form judul dan nominal tersebut
-![](gambar/3.png)
+![](gambar/tugas8/3.png)
 
 ##### Membuat dropdown
-![](gambar/6.png)
+![](gambar/tugas8/6.png)
 
 ##### Membuat button yang memunculkan tanggal
-![](gambar/4.png)
-![](gambar/5.png)
+![](gambar/tugas8/4.png)
+![](gambar/tugas8/5.png)
 
 ##### Membuat file data_budget yang akan menampilkan semua data yang diinput
-![](gambar/7.png)
+![](gambar/tugas8/7.png)
 
 ##### Membuat file budget yang akan menampilkan attribute yang dibutuhkan
-![](gambar/8.png)
+![](gambar/tugas8/8.png)
 
 # PBP Tugas 9 -----------------------
  
- 1. Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+ ### 1. Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+
+=> Pengambilan data JSON dapat dilakukan tanpa membuat model terlebih dahulu. 
+Secara behavioral, JSON = suatu object dalam notasi Javascript. Dalam bahasa Dart, hal itu ekuivalen dengan Map di mana object yang terdiri dari key dengan value pair.
+
+Pengambilan data JSON tanpa melakukan konversi ke dalam suatu model => bukan merupakan best practice dalam pengimplementasiannya
+
+Konversi data JSON ke dalam suatu model => untuk meminimalisir kesalahan pengambilan atau pengiriman data melalui http-request yang akan ditampilkan pada sisi UI aplikasi.
+
+ ### 2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+
+| Widget | Fungsi | 
+| :---------: | ----------: |
+| Scaffold | Widget utk mengatur struktur visual layout dengan mengimplementasikan material design | 
+| Form | utk buat form  | 
+| TextStyle | memberikan styling pada text, misalnya warna | 
+| Padding | memberikan jarak pada widget | 
+| Column | utk menampung widget lainnya secara vertikal | 
+| Container | sebagai container utk menampung widget lainnya | 
+| ListTile | row yg menampung teks sbg leading dan trailing | 
+| Drawer | utk buat drawer di sisi kiri layar (utk navigasi)  | 
+| FutureBuilder | utk generate array of widget brdsrkn suatu snapshot dgn memperhatikan interaksi snapshot terbaru | 
+
+ ### 3. Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+
+1. Membuat sebuah function http request dgn method `GET` => secara async utk ambil data ke pihak eksternal 
+2. di function tsb lakukan parsing dgn `jsonDecode()` utk -> ubah response String jd JSON
+3. Konversi object JSON ke dlm suatu Model Object
+4. Gunakan widget `FutureBuilder` utk menampilkan widget2 dgn snapshot dat aterbaru yg telah dikonversi jd sebuah object
+
+ Mekanisme pengambilan data yang pertama yaitu menambahkan import dart convert pada bagian paling atas file. Ketika kita me-request suatu web service dengan method GET, umumnya kita mendapatkan hasil pemanggilan berupa JSON. Maka perlu konversi data dgn method fromJson => Flutter mengenali JSON tersebut sebagai objek class MyWatchList. Method toJson => akan digunakan pas kita melakukan pengiriman data ke web service (seperti POST atau PUT). 
+
  
- 2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
- 
- 3. Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
- 
- 4. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+ ### 4. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+
+##### Menambahkan drawer pada navigation bar di drawer.dart berupa MyWatchList, yg nantinya akan menampilkan mywatchlist_page.dart
+![](gambar/tugas9/1.png)
+
+##### Membuat model untuk mywatchlist, di foler model => mywatchlist.dart
+
+#### 1. Membuat Respons dari web service berupa kumpulan objek JSON
+      - ketika kita me-request suatu web service dengan method GET, umumnya kita mendapatkan hasil pemanggilan berupa JSON. 
+      - Maka perlu konversi data dgn method fromJson => Flutter mengenali JSON tersebut sebagai objek class MyWatchList
+      - Method toJson => akan digunakan pas kita melakukan pengiriman data ke web service (seperti POST atau PUT).
+
+![](gambar/tugas9/2.png)
+![](gambar/tugas9/3.png)
+
+#### 2. Membuat page MyWatchList yang akan berisi data semua watch list yang ada pada endpoint JSON di Django yang telah kamu deploy ke Heroku sebelumnya (Tugas 3).  => mywatchlist_page.dart 
+
+![](gambar/tugas9/data.png)
+![](gambar/tugas9/4.png)
+![](gambar/tugas9/5.png)
+
+#### 3. Membuat page MyWatchList yang akan berisi data detail dari masing-masing watch list yang tersedia, dan bisa muncul ketika judul watchlist nya di klik => mywatchlist_detail.dart  
+![](gambar/tugas9/detail.png)
+![](gambar/tugas9/6.png)
+
+#### 3. Membuat folder dataSource dan membuat file => mywatchlist_remote_dataSource.dart
+![](gambar/tugas9/7.png)
+
+#### 4. Menambahkan Dependensi HTTP
+    -melakukan perintah HTTP request, kita membutuhkan package tambahan yakni package http.
+![](gambar/tugas9/8.png)
